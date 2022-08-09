@@ -1,0 +1,16 @@
+{
+  "name": "total_expense_bot",
+  "version": "0.0.1",
+  "description": "Bot for get total expense from Notion using Notion API",
+  "main": "index.js",
+  "author": "DimaKapish",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@notionhq/client": "^2.1.1",
+    "axios": "^0.27.2",
+    "cron": "^2.1.0",
+    "telegraf": "^4.8.6",
+    "uuid": "^8.3.2"
+  }
+}
