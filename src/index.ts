@@ -31,7 +31,7 @@ const getPropertyValue = async (pageId, propertyId) => {
   return data;
 };
 
-const getDatabasesInsideSharedPage = async (action) => {
+const getDatabasesInsideSharedPage = async () => {
   const { data } = await notionApiClient.post('search', {
     filter: {
       value: 'database',
@@ -58,7 +58,7 @@ const getPagesWithCalculationProperty = async (database) => {
 
 const getCalculationProperties = async (database) => {
   const pages = await getPagesWithCalculationProperty(database);
-  const properties = pages.map((page) => ({
+  const properties = pages.map((page: any) => ({
     pageId: page.id,
     propertyId: page.properties[calculationPropertyName].id,
   }));
@@ -152,7 +152,7 @@ bot.command('details', async (ctx) => {
   const groupedSum = await getSumGroupedDatabase();
   const replyText = groupedSum.reduce((prev, current) => {
     const title = Object.keys(current)[0];
-    const sum = Object.values(current)[0];
+    const sum: any = Object.values(current)[0];
 
     prev += `- ${title}: ${sum.toFixed(2)}₴\n`;
 
