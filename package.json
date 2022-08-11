@@ -19,6 +19,8 @@
     "dev": "nodemon"
   },
   "devDependencies": {
+    "@grammyjs/types": "^2.8.2",
+    "@types/cron": "^2.0.0",
     "@types/node": "^18.6.5",
     "nodemon": "^2.0.19",
     "typescript": "^4.7.4"

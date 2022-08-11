@@ -15,7 +15,9 @@ export const getPropertyValue = async (
   return props;
 };
 
-export const getCalculationPropertiesValue = async (properties: Array<PropertyMap>) => {
+export const getCalculationPropertiesValue = async (
+  properties: Array<PropertyMap>,
+): Promise<Array<ProperyValue>> => {
   if (!properties.length) {
     return [];
   }
